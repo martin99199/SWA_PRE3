@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="PRE SWA Projekt" company="Advanced Software associated Products" webLink="http://" view-date="2016-11-17" view-index="0" gantt-divider-location="353" resource-divider-location="300" version="2.8.1" locale="de">
+    <description><![CDATA[Implementation of the PRE and SWA project -- This document helps to fullfill timing and cost requirements]]></description>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd3" name="Vorgang" width="199" order="0"/>
+        <field id="tpd4" name="Anfang" width="75" order="1"/>
+        <field id="tpd5" name="Ende" width="75" order="2"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Ressource" width="210" order="0"/>
+        <field id="1" name="Rolle" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="0" mon="1" tue="1" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+    </tasks>
+    <resources>
+        <resource id="0" name="Martin" function="Default:1" contacts="" phone=""/>
+        <resource id="1" name="Tobias" function="SoftwareDevelopment:2" contacts="" phone=""/>
+        <resource id="2" name="Alex" function="SoftwareDevelopment:3" contacts="" phone=""/>
+        <resource id="3" name="Reinhard" function="SoftwareDevelopment:2" contacts="" phone=""/>
+    </resources>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>
