@@ -1,0 +1,8 @@
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Testtreiber\bin\Debug\Testtreiber.exe.config
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Testtreiber\bin\Debug\Testtreiber.exe
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Testtreiber\bin\Debug\Testtreiber.pdb
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Testtreiber\bin\Debug\EntscheidungshelferBibliothek.dll
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Testtreiber\bin\Debug\EntscheidungshelferBibliothek.pdb
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Testtreiber\obj\Debug\Testtreiber.csprojResolveAssemblyReference.cache
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Testtreiber\obj\Debug\Testtreiber.exe
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Testtreiber\obj\Debug\Testtreiber.pdb

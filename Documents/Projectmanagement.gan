@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="PRE SWA Projekt" company="Advanced Software associated Products" webLink="http://" view-date="2016-11-17" view-index="0" gantt-divider-location="353" resource-divider-location="300" version="2.8.1" locale="de">
+<?xml version="1.0" encoding="UTF-8"?><project name="PRE SWA Projekt" company="Advanced Software associated Products" webLink="http://" view-date="2017-01-01" view-index="2" gantt-divider-location="825" resource-divider-location="300" version="2.8.1" locale="de">
     <description><![CDATA[Implementation of the PRE and SWA project -- This document helps to fullfill timing and cost requirements]]></description>
-    <view zooming-state="default:2" id="gantt-chart">
-        <field id="tpd3" name="Vorgang" width="199" order="0"/>
-        <field id="tpd4" name="Anfang" width="75" order="1"/>
-        <field id="tpd5" name="Ende" width="75" order="2"/>
+    <view zooming-state="default:1" id="gantt-chart">
+        <field id="tpd3" name="Vorgang" width="484" order="0"/>
+        <field id="tpd4" name="Anfang" width="193" order="1"/>
+        <field id="tpd5" name="Ende" width="144" order="2"/>
+        <timeline><![CDATA[18,5,26,4,0,28,21]]></timeline>
+        <option id="color.recent"><![CDATA[#ffcc33 #33ff00 #6633ff #33ff33 #ff6666 #ccffcc]]></option>
     </view>
     <view id="resource-table">
         <field id="0" name="Ressource" width="210" order="0"/>
@@ -33,6 +35,34 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
+        <task id="0" name="Design und Architektur" color="#6633ff" meeting="false" start="2016-11-17" duration="44" complete="0" expand="true">
+            <depend id="2" type="2" difference="0" hardness="Strong"/>
+            <depend id="3" type="2" difference="0" hardness="Strong"/>
+            <depend id="4" type="2" difference="0" hardness="Strong"/>
+            <depend id="5" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="28" name="Dokumentation" color="#33ff33" meeting="false" start="2017-01-04" duration="21" complete="0" expand="true">
+            <depend id="26" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="2" name="Client- User" color="#8cb6ce" meeting="false" start="2017-01-18" duration="4" complete="0" expand="true">
+            <depend id="18" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="3" name="Client- Admin" color="#8cb6ce" meeting="false" start="2017-01-18" duration="4" complete="0" expand="true">
+            <depend id="18" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="4" name="Server" color="#8cb6ce" meeting="false" start="2017-01-18" duration="4" complete="0" expand="true">
+            <depend id="18" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="5" name="Kommunikationsbibliothek" color="#8cb6ce" meeting="false" start="2017-01-18" duration="4" complete="0" expand="true">
+            <depend id="18" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="18" name="Zusammenführung" color="#33ff00" meeting="false" start="2017-01-22" duration="1" complete="0" expand="true">
+            <depend id="21" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="21" name="Testen und Fehlerausbesserung" color="#ffcc33" meeting="false" start="2017-01-25" duration="3" complete="0" expand="true">
+            <depend id="26" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="26" name="Abnahme" color="#ff6666" meeting="true" start="2017-02-02" duration="0" complete="0" expand="true"/>
     </tasks>
     <resources>
         <resource id="0" name="Martin" function="Default:1" contacts="" phone=""/>
@@ -40,7 +70,20 @@
         <resource id="2" name="Alex" function="SoftwareDevelopment:3" contacts="" phone=""/>
         <resource id="3" name="Reinhard" function="SoftwareDevelopment:2" contacts="" phone=""/>
     </resources>
-    <allocations/>
+    <allocations>
+        <allocation task-id="0" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="5" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="21" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="0" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="2" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="4" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="21" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="28" resource-id="2" function="SoftwareDevelopment:3" responsible="true" load="100.0"/>
+        <allocation task-id="0" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="3" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="4" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="21" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+    </allocations>
     <vacations/>
     <previous/>
     <roles roleset-name="Default"/>
