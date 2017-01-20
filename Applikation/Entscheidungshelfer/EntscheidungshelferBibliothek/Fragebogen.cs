@@ -135,7 +135,18 @@ namespace EntscheidungshelferBibliothek
         /// <returns>String in obigem Format</returns>
         public override string ToString()
         {
+            //Muss noch implementiert werden
             return base.ToString();
+        }
+
+        /// <summary>
+        /// Vorschau des Fragebogens mit dem Titel
+        /// und den Eckdaten
+        /// </summary>
+        /// <returns>String, der die Informationen enthält</returns>
+        public string vorschau()
+        {
+            return this.titel_ + String.Format(" Anzahl der Fragen: {0}", this.fragen_.Count);
         }
         #endregion
 
