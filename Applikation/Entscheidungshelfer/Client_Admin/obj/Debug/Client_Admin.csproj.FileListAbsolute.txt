@@ -1,0 +1,10 @@
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_Admin\bin\Debug\Client_Admin.exe.config
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_Admin\bin\Debug\Client_Admin.exe
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_Admin\bin\Debug\Client_Admin.pdb
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_Admin\bin\Debug\EntscheidungshelferBibliothek.dll
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_Admin\bin\Debug\EntscheidungshelferBibliothek.pdb
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_Admin\obj\Debug\Client_Admin.csprojResolveAssemblyReference.cache
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_Admin\obj\Debug\Client_Admin.Properties.Resources.resources
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_Admin\obj\Debug\Client_Admin.csproj.GenerateResource.Cache
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_Admin\obj\Debug\Client_Admin.exe
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_Admin\obj\Debug\Client_Admin.pdb

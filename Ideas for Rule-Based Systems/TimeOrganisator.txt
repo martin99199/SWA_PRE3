@@ -1,0 +1,12 @@
+Eingabe: z.B. für Prüfungen, Abgabefristen, ...
+
+Wie viele Prüfungen?
+Wann?
+Wissensstand? Schätzung
+Gewichtung 
+Verfügbare Zeit z.B. pro Tag?
+
+Ergebnis:
+1) 1h lernen für Prüfung 1   -> Frage: Erfolgreich?
+2) 0.5h lernen für Prüfung 3 -> Frage: Erfolgreich?
+3) Pause... 
