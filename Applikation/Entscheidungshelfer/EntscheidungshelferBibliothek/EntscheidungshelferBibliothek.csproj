@@ -50,12 +50,21 @@
     <Compile Include="FragenSteller.Designer.cs">
       <DependentUpon>FragenSteller.cs</DependentUpon>
     </Compile>
+    <Compile Include="Importer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Importer.Designer.cs">
+      <DependentUpon>Importer.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfaceBibliothek.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FragenSteller.resx">
       <DependentUpon>FragenSteller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Importer.resx">
+      <DependentUpon>Importer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

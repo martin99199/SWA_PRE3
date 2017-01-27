@@ -47,7 +47,7 @@ namespace Server
 
         /// <summary>
         /// Implementierung des Interfaces mit dem der User-Client
-        /// die verfuegbaren Clients abfragt.
+        /// die verfuegbaren Fragebögen abfragt.
         /// </summary>
         /// <returns>string, der eine Liste von Vorschauen der 
         /// Frageboegen (inkl. id) enthält (getrennt durch \r\n)</returns>
