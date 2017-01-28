@@ -8,3 +8,5 @@ C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_
 C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_Admin\obj\Debug\Client_Admin.csproj.GenerateResource.Cache
 C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_Admin\obj\Debug\Client_Admin.exe
 C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_Admin\obj\Debug\Client_Admin.pdb
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_Admin\obj\Debug\Client_Admin.Client_Admin.resources
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_Admin\obj\Debug\Client_Admin.Input_Fragebogen.resources
