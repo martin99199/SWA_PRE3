@@ -71,7 +71,22 @@ namespace Client_Admin
 
             if (eingabeOK)
             {
-                remoteFragebogen.sendeFragebogen(neuerFragebogen);
+                try
+                {
+                    bool fragebogenGesendet = remoteFragebogen.sendeFragebogen(neuerFragebogen);
+                    if (fragebogenGesendet)
+                    {
+                        MessageBox.Show("Fragebogen an Server gesendet!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Senden fehlgeschlagen! Bitte versuchen Sie es später erneut.");
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Server nicht erreichbar. Bitte stellen Sie sicher, dass die Verbindungsdaten stimmen und starten Sie das Programm erneut.");
+                }
             }
             else
             {
