@@ -253,9 +253,9 @@ namespace EntscheidungshelferBibliothek
         /// Erstellt aus einem String in einem speziellen Format (CSV) ein Objekt
         /// vom Typ Frage (= Frage & Antwortmöglichkeiten
         /// </summary>
-        /// <param name="frageSpeicherString">Eine Zeile aus einem CSV (';') File, dass die Frage und die Antworten, getrennt durch ';' enthält</param>
+        /// <param name="frageSpeicherString">Eine Zeile aus einer CSV (';') Zeile, die die Frage und die Antworten, getrennt durch ';' enthält</param>
         /// <returns>Frage-Objekt, mit der Frage und den Antwortmöglichkeiten</returns>
-        public static Frage parseFrage(string frageSpeicherString)
+        public static Frage parseFrage(string frageString)
         {
             string[] felder;
             felder = frageSpeicherString.Split(';');
