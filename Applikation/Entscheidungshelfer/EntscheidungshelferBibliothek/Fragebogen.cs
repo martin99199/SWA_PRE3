@@ -122,7 +122,7 @@ namespace EntscheidungshelferBibliothek
         ///   |                           |
         ///   | Antwort1                  |
         ///   |                           |
-        /// Frage2 --------Antwort1--------
+        /// Frage2 --------Antwort2--------
         ///   |                           |
         ///   | Antwort1                  |
         ///   |
@@ -135,8 +135,46 @@ namespace EntscheidungshelferBibliothek
         /// <returns>String in obigem Format</returns>
         public override string ToString()
         {
-            //Muss noch implementiert werden
-            return base.ToString();
+            int[] groessen = this.bestimmeGroessen(); //maxFrage, maxAntw1, maxAntw2
+            int zeilenlaenge = 0;
+            if (groessen[1]> groessen[2])
+            {
+                zeilenlaenge = groessen[0] + groessen[1] + 10;
+            }
+            else
+            {
+                zeilenlaenge = groessen[0] + groessen[2]+10; //mindestens 5 Trennzeichen
+            }
+
+            string retString = "";
+            for(int ii = 0; ii < this.fragen_.Count; ++ii)
+            {
+                string zeile = "";
+                if (ii != this.fragen_.Count-1)
+                {
+                    zeile += this.fragen_[ii].FrageText;
+                    zeile = zeile.PadRight(zeilenlaenge - fragen_[ii].Antwort2.Length - 5, '-');
+                    zeile += this.fragen_[ii].Antwort2;
+                    zeile = zeile.PadRight(zeilenlaenge, '-') + "\r\n";
+                    //
+                    retString += zeile;
+                    retString += "|".PadRight(zeilenlaenge - 1) + "|\r\n";
+                    retString += "|" + this.fragen_[ii].Antwort1.PadRight(zeilenlaenge - 2) + "|\r\n";
+                    retString += "|".PadRight(zeilenlaenge - 1) + "|\r\n";
+                }
+                else
+                {
+                    zeile += this.fragen_[ii].FrageText;
+                    zeile = zeile.PadRight(zeilenlaenge - fragen_[ii].Antwort2.Length - 5, '-');
+                    zeile += this.fragen_[ii].Antwort2;
+                    zeile = zeile.PadRight(zeilenlaenge, '-') + "\r\n";
+                    retString += zeile;
+                    retString += "|".PadRight(zeilenlaenge - 1) + "|\r\n";
+                    retString += "Positiv".PadRight(zeilenlaenge - "Negativ".Length) + "Negativ";
+                }
+            }
+            
+            return retString;
         }
 
         /// <summary>
@@ -162,6 +200,37 @@ namespace EntscheidungshelferBibliothek
         public bool FinalesErgebnis
         {
             get { return this.finalesErgebnis_; }
+        }
+        #endregion
+
+        #region Hilfsmethoden
+        /// <summary>
+        /// Hilfsmethode um zu bestimmen, wie viele Stellen gepadet werden müssen
+        /// für die .ToStringMethode
+        /// </summary>
+        /// <returns>Array mit maxGrößeFrage, maxGrößeAntwort1 und maxGrößeAntwort2</returns>
+        private int [] bestimmeGroessen()
+        {
+            int maxGroesseAntwort1 = 0;
+            int maxGroesseAntwort2 = 0;
+            int maxGroesseFrage = 0;
+            foreach (Frage frage in this.fragen_)
+            {
+                if (frage.FrageText.Length > maxGroesseFrage)
+                {
+                    maxGroesseFrage = frage.FrageText.Length;
+                }
+                if (frage.Antwort1.Length > maxGroesseAntwort1)
+                {
+                    maxGroesseAntwort1 = frage.Antwort1.Length;
+                }
+                if (frage.Antwort2.Length > maxGroesseAntwort2)
+                {
+                    maxGroesseAntwort2 = frage.Antwort2.Length;
+                }
+
+            }
+            return new int[] { maxGroesseFrage, maxGroesseAntwort1, maxGroesseAntwort2 };
         }
         #endregion
     }
@@ -258,7 +327,7 @@ namespace EntscheidungshelferBibliothek
         public static Frage parseFrage(string frageString)
         {
             string[] felder;
-            felder = frageSpeicherString.Split(';');
+            felder = frageString.Split(';');
             return new Frage(felder[0], felder[1], felder[2]);
         }
         #endregion

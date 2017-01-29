@@ -33,6 +33,7 @@ namespace Testtreiber
             fragebogen2.fuegeFrageHinzu("f4", "a1", "a2");
             fragebogen2.fuegeFrageHinzu("f5", "a1", "a2");
             bool abbruch=false;
+            Console.Write(fragebogen2.ToString());
 
             while(!fragebogen2.FragebogenFertig && !abbruch)
             {
