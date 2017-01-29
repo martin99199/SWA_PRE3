@@ -34,7 +34,6 @@
             this.tbxVorschau = new System.Windows.Forms.TextBox();
             this.gbFragebogen = new System.Windows.Forms.GroupBox();
             this.btnSpeichern = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.gbFragebogen.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +49,7 @@
             // 
             // btnLaden
             // 
-            this.btnLaden.Location = new System.Drawing.Point(6, 57);
+            this.btnLaden.Location = new System.Drawing.Point(6, 25);
             this.btnLaden.Name = "btnLaden";
             this.btnLaden.Size = new System.Drawing.Size(214, 46);
             this.btnLaden.TabIndex = 1;
@@ -70,41 +69,33 @@
             // 
             // tbxVorschau
             // 
-            this.tbxVorschau.Location = new System.Drawing.Point(39, 131);
+            this.tbxVorschau.Location = new System.Drawing.Point(39, 105);
             this.tbxVorschau.Multiline = true;
             this.tbxVorschau.Name = "tbxVorschau";
             this.tbxVorschau.ReadOnly = true;
-            this.tbxVorschau.Size = new System.Drawing.Size(450, 315);
+            this.tbxVorschau.Size = new System.Drawing.Size(450, 341);
             this.tbxVorschau.TabIndex = 4;
             // 
             // gbFragebogen
             // 
             this.gbFragebogen.Controls.Add(this.btnSpeichern);
             this.gbFragebogen.Controls.Add(this.btnLaden);
-            this.gbFragebogen.Controls.Add(this.textBox1);
             this.gbFragebogen.Location = new System.Drawing.Point(39, 12);
             this.gbFragebogen.Name = "gbFragebogen";
-            this.gbFragebogen.Size = new System.Drawing.Size(450, 113);
+            this.gbFragebogen.Size = new System.Drawing.Size(450, 87);
             this.gbFragebogen.TabIndex = 5;
             this.gbFragebogen.TabStop = false;
             this.gbFragebogen.Text = "Fragebogen";
             // 
             // btnSpeichern
             // 
-            this.btnSpeichern.Location = new System.Drawing.Point(230, 57);
+            this.btnSpeichern.Location = new System.Drawing.Point(230, 25);
             this.btnSpeichern.Name = "btnSpeichern";
             this.btnSpeichern.Size = new System.Drawing.Size(214, 46);
             this.btnSpeichern.TabIndex = 6;
             this.btnSpeichern.Text = "Speichern";
             this.btnSpeichern.UseVisualStyleBackColor = true;
             this.btnSpeichern.Click += new System.EventHandler(this.btnSpeichern_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(6, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(438, 26);
-            this.textBox1.TabIndex = 3;
             // 
             // Client_Admin
             // 
@@ -118,7 +109,6 @@
             this.Name = "Client_Admin";
             this.Text = "Client Admin";
             this.gbFragebogen.ResumeLayout(false);
-            this.gbFragebogen.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,7 +122,6 @@
         private System.Windows.Forms.TextBox tbxVorschau;
         private System.Windows.Forms.GroupBox gbFragebogen;
         private System.Windows.Forms.Button btnSpeichern;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
