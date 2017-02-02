@@ -70,7 +70,7 @@ namespace Server
                     int ii = 0;
                     foreach(Fragebogen frageBogen in this.frageboegen_)
                     {
-                        verfuegbareBoegen += string.Format("{0}: {1}", ii, frageBogen.vorschau());
+                        verfuegbareBoegen += string.Format("{0}: {1};", ii, frageBogen.vorschau());
                         ++ii;
                     }
                 }

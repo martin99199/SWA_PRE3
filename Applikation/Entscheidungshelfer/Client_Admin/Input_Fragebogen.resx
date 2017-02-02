@@ -119,10 +119,12 @@
   </resheader>
   <data name="lbText.Text" xml:space="preserve">
     <value>Eingaberichtlinien:
+In der ersten Zeile muss der Titel stehen.
 Die Fragen und Antworten sind durch ";" getrennt, die Fragestellungen 
 sind durch Absätze getrennt. Ein Fragebogen muss mindestens eine
 Frage inklusive Antworten enthalten.
 Bsp.:
+Titel der Befragung
 Fragestellung 1;Gewünschte Antwort;Ungewünschte Antwort
 Fragestellung 2;Gewünschte Antwort;Ungewünschte Antwort</value>
   </data>

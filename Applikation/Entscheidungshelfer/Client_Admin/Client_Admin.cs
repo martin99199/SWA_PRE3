@@ -51,24 +51,32 @@ namespace Client_Admin
 
             string[] linien = tbxVorschau.Text.Split('\n');
             bool eingabeOK = true;
-            foreach (string linie in linien)
+            try
             {
-                try
+                neuerFragebogen.Titel = linien[0];
+                for (int ii = 1; ii < linien.Length; ++ii)
                 {
-                    if (linie != "\r" && linie != "")
+                    string linie = linien[ii];
+                    try
                     {
-                        string[] linieElemente = linie.Split(';');
-                        string[] zwErg = linieElemente[2].Split('\r');
-                        linieElemente[2] = zwErg[0];
-                        neuerFragebogen.fuegeFrageHinzu(linieElemente[0], linieElemente[1], linieElemente[2]);
+                        if (linie != "\r" && linie != "")
+                        {
+                            string[] linieElemente = linie.Split(';');
+                            string[] zwErg = linieElemente[2].Split('\r');
+                            linieElemente[2] = zwErg[0];
+                            neuerFragebogen.fuegeFrageHinzu(linieElemente[0], linieElemente[1], linieElemente[2]);
+                        }
+                    }
+                    catch
+                    {
+                        eingabeOK = false;
                     }
                 }
-                catch
-                {
-                    eingabeOK = false;
-                }
             }
-
+            catch
+            {
+                eingabeOK = false;
+            }
             if (eingabeOK)
             {
                 try

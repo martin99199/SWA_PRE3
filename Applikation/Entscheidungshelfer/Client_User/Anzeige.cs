@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Client_User
 {
-    public partial class Form1 : Form
+    public partial class Anzeige : Form
     {
-        public Form1()
+        public Anzeige()
         {
             InitializeComponent();
         }

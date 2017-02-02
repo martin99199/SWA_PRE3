@@ -37,6 +37,7 @@ namespace EntscheidungshelferBibliothek
             this.aktuelleFrageNr_ = 0;
             this.fragebogenIstFertig_ = false;
             this.finalesErgebnis_ = true;
+            this.titel_ = "Leerer Fragebogen";
         }
 
         /// <summary>
@@ -118,6 +119,7 @@ namespace EntscheidungshelferBibliothek
         /// Überschreibung der ToString-Methode:
         /// Stellt einen Fragebogen übersichtlich dar mit seinen 
         /// Entscheidungsmöglichkeiten-->
+        /// Titel
         /// Frage1 --------Antwort2--------
         ///   |                           |
         ///   | Antwort1                  |
@@ -146,7 +148,7 @@ namespace EntscheidungshelferBibliothek
                 zeilenlaenge = groessen[0] + groessen[2]+10; //mindestens 5 Trennzeichen
             }
 
-            string retString = "";
+            string retString = this.titel_ + "\r\n";
             for(int ii = 0; ii < this.fragen_.Count; ++ii)
             {
                 string zeile = "";
@@ -200,6 +202,17 @@ namespace EntscheidungshelferBibliothek
         public bool FinalesErgebnis
         {
             get { return this.finalesErgebnis_; }
+        }
+        public string Titel
+        {
+            get { return this.titel_; }
+            set
+            {
+                if (!string.IsNullOrEmpty(value))
+                {
+                    this.titel_ = value;
+                }
+            }
         }
         #endregion
 

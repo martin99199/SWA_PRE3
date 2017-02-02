@@ -38,8 +38,8 @@
             // btnAbbrechen
             // 
             this.btnAbbrechen.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnAbbrechen.Location = new System.Drawing.Point(45, 608);
-            this.btnAbbrechen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAbbrechen.Location = new System.Drawing.Point(45, 700);
+            this.btnAbbrechen.Margin = new System.Windows.Forms.Padding(4);
             this.btnAbbrechen.Name = "btnAbbrechen";
             this.btnAbbrechen.Size = new System.Drawing.Size(292, 74);
             this.btnAbbrechen.TabIndex = 5;
@@ -48,8 +48,8 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(413, 608);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOK.Location = new System.Drawing.Point(413, 700);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(292, 74);
             this.btnOK.TabIndex = 7;
@@ -63,13 +63,13 @@
             this.lbText.Location = new System.Drawing.Point(40, 11);
             this.lbText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbText.Name = "lbText";
-            this.lbText.Size = new System.Drawing.Size(687, 175);
+            this.lbText.Size = new System.Drawing.Size(687, 225);
             this.lbText.TabIndex = 8;
             this.lbText.Text = resources.GetString("lbText.Text");
             // 
             // tbxFragebogen
             // 
-            this.tbxFragebogen.Location = new System.Drawing.Point(45, 202);
+            this.tbxFragebogen.Location = new System.Drawing.Point(45, 268);
             this.tbxFragebogen.Multiline = true;
             this.tbxFragebogen.Name = "tbxFragebogen";
             this.tbxFragebogen.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -80,13 +80,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 696);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(763, 833);
             this.ControlBox = false;
             this.Controls.Add(this.tbxFragebogen);
             this.Controls.Add(this.lbText);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnAbbrechen);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Input_Fragebogen";
             this.Text = "Fragebogen Erstellen";
             this.ResumeLayout(false);

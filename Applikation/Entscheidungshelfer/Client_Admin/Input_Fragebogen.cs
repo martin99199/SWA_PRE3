@@ -32,19 +32,27 @@ namespace Client_Admin
         {
             string[] linien = tbxFragebogen.Text.Split('\n');
             bool eingabeOK = true;
-            foreach(string linie in linien)
+            if (linien.Length > 1)
             {
-                try
+                for (int ii = 1; ii < linien.Length; ++ii)
                 {
-                    if(linie != "\r" && linie != "")
+                    string linie = linien[ii];
+                    try
                     {
-                        Frage.parseFrage(linie);
+                        if (linie != "\r" && linie != "")
+                        {
+                            Frage.parseFrage(linie);
+                        }
+                    }
+                    catch
+                    {
+                        eingabeOK = false;
                     }
                 }
-                catch
-                {
-                    eingabeOK = false;
-                }
+            }
+            else
+            {
+                eingabeOK = false;
             }
             if(eingabeOK)
             {
@@ -56,5 +64,6 @@ namespace Client_Admin
                 MessageBox.Show("Bitte Eingabe auf richtiges Format prüfen");
             }
         }
+
     }
 }

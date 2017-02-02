@@ -1,6 +1,6 @@
 ﻿namespace Client_User
 {
-    partial class Form3
+    partial class Anzeige
     {
         /// <summary>
         /// Required designer variable.
@@ -29,24 +29,38 @@
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSchliessen = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 24);
+            this.textBox1.Location = new System.Drawing.Point(24, 46);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(352, 225);
+            this.textBox1.Size = new System.Drawing.Size(700, 429);
             this.textBox1.TabIndex = 0;
             // 
-            // Form3
+            // btnSchliessen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.btnSchliessen.Location = new System.Drawing.Point(24, 484);
+            this.btnSchliessen.Name = "btnSchliessen";
+            this.btnSchliessen.Size = new System.Drawing.Size(700, 85);
+            this.btnSchliessen.TabIndex = 1;
+            this.btnSchliessen.Text = "Schließen";
+            this.btnSchliessen.UseVisualStyleBackColor = true;
+            // 
+            // Anzeige
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(376, 261);
+            this.ClientSize = new System.Drawing.Size(752, 598);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnSchliessen);
             this.Controls.Add(this.textBox1);
-            this.Name = "Form3";
-            this.Text = "Form3";
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Name = "Anzeige";
+            this.Text = "Aktueller Fragensatz";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -55,5 +69,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnSchliessen;
     }
 }
