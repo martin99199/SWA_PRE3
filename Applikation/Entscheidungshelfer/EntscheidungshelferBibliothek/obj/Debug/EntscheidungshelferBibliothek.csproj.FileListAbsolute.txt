@@ -6,3 +6,5 @@ C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Entsche
 C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Debug\EntscheidungshelferBibliothek.csproj.GenerateResource.Cache
 C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Debug\EntscheidungshelferBibliothek.FragenSteller.resources
 C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Debug\EntscheidungshelferBibliothek.Importer.resources
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\bin\Debug\EntscheidungshelferBibliothek.dll.CodeAnalysisLog.xml
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\bin\Debug\EntscheidungshelferBibliothek.dll.lastcodeanalysissucceeded
