@@ -6,5 +6,6 @@ C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Testtre
 C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Testtreiber\obj\Debug\Testtreiber.csprojResolveAssemblyReference.cache
 C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Testtreiber\obj\Debug\Testtreiber.exe
 C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Testtreiber\obj\Debug\Testtreiber.pdb
-C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Testtreiber\bin\Debug\Testtreiber.exe.CodeAnalysisLog.xml
-C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Testtreiber\bin\Debug\Testtreiber.exe.lastcodeanalysissucceeded
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Testtreiber\bin\Debug\Testtreiber.exe.config
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Testtreiber\obj\Debug\Testtreiber.exe
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Testtreiber\obj\Debug\Testtreiber.pdb
