@@ -41,6 +41,15 @@ namespace Server
         public bool sendeFragebogen(Fragebogen bogen)
         {
             bool fragebogenEmpfangen = false;
+            if (Monitor.TryEnter(this.verriegelungsObjekt_, 100))
+            {
+                if (bogen != null)
+                {
+                    this.frageboegen_.Add(bogen);
+                    fragebogenEmpfangen = true;
+                }
+                Monitor.Exit(this.verriegelungsObjekt_);
+            }
             return fragebogenEmpfangen;
         }
 
