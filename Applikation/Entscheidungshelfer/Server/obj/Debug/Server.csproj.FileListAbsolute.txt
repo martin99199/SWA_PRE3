@@ -6,3 +6,5 @@ C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Server\
 C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Server\bin\Debug\EntscheidungshelferBibliothek.pdb
 C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Server\obj\Debug\Server.exe
 C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Server\obj\Debug\Server.pdb
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Server\bin\Debug\Server.exe.CodeAnalysisLog.xml
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Server\bin\Debug\Server.exe.lastcodeanalysissucceeded
