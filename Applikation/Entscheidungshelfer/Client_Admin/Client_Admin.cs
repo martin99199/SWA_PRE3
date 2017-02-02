@@ -13,10 +13,18 @@ using EntscheidungshelferBibliothek;
 
 namespace Client_Admin
 {
+    /// <summary>
+    /// Die Form Client_Admin wird verwendet um Fragebögen zu ändern oder neue zu erstellen.
+    /// Der aktuelle Fragebogen kann gespeichert werden und auch an den Server gesendet werden.
+    /// </summary>
     public partial class Client_Admin : Form
     {
-        private RemoteFragebogen remoteFragebogen; 
+        private RemoteFragebogen remoteFragebogen;
 
+        /// <summary>
+        /// Initialisierung der Forms Komponenten 
+        /// Initialisierung des Servers
+        /// </summary>
         public Client_Admin()
         {
             InitializeComponent();
@@ -34,6 +42,12 @@ namespace Client_Admin
             }
         }
 
+        /// <summary>
+        /// Dialogaufbau mit Form Input_Fragebogen
+        /// nach korrekter Fragebogenerstellung, Textübernahme auf tbxVorschau
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnErstellen_Click(object sender, EventArgs e)
         {
             Input_Fragebogen form2InputFragebogen = new Input_Fragebogen();
@@ -45,6 +59,12 @@ namespace Client_Admin
             }
         }
 
+        /// <summary>
+        /// Konvertierung von Text in Fragebogen und senden an den Server
+        /// Auf Fehler wird mit MessageBoxen hingewiesen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExportieren_Click(object sender, EventArgs e)
         {
             Fragebogen neuerFragebogen = new Fragebogen();
@@ -94,6 +114,11 @@ namespace Client_Admin
             }
         }
 
+        /// <summary>
+        /// Dialogaufbau mit SaveFileDialog um Speicherposition für Fragebogen zu wählen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSpeichern_Click(object sender, EventArgs e)
         {
             // SaveFileDialog Anzeigen
@@ -115,6 +140,12 @@ namespace Client_Admin
             }
         }
 
+        /// <summary>
+        /// Dialogaufbau mit OpenFileDialog um Fragebogen zu laden
+        /// Anzeige des Fragebogens in tbxVorschau
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLaden_Click(object sender, EventArgs e)
         {
             // SaveFileDialog Anzeigen
@@ -132,7 +163,6 @@ namespace Client_Admin
                     zeilen += datei.ReadLine() + "\r\n";                   
                 }
                 tbxVorschau.Text = zeilen;
-                //Fragebogen fragebongen = new Fragebogen(openFileDialog1.FileName);
             }
         }
     }

@@ -11,6 +11,10 @@ using EntscheidungshelferBibliothek;
 
 namespace Client_Admin
 {
+    /// <summary>
+    /// Die Form Input_Fragebogen wird von Form Client_Admin aufgerugen 
+    /// um einen neuen Fragebogen zu erstellen.
+    /// </summary>
     public partial class Input_Fragebogen : Form
     {
         #region Properties
@@ -23,11 +27,21 @@ namespace Client_Admin
         }
         #endregion
 
+        /// <summary>
+        /// Initialisierung der Forms Komponenten 
+        /// </summary>
         public Input_Fragebogen()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Überprüfung der Fragebogeneingabe 
+        /// Auf Fehler wird mit MessageBoxen hingewiesen
+        /// Bei richtiger Eingabe wird das DialogResult auf OK gesetzt und das Fenster geschlossen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOK_Click(object sender, EventArgs e)
         {
             string[] linien = tbxFragebogen.Text.Split('\n');
