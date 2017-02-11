@@ -14,8 +14,8 @@ namespace Client_User
 {
     public partial class Importer : Form
     {
-        private RemoteFragebogen fragebogen;
-        private Fragebogen importierterFragebogen;
+        private RemoteFragebogen remoteFragebogen;
+        private Fragebogen importierterFragebogen_;
         public Importer()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace Client_User
             {
                 ChannelFactory<RemoteFragebogen> cFactory;
                 cFactory = new ChannelFactory<RemoteFragebogen>("WsHttpBinding_RemoteFragebogen");
-                fragebogen = cFactory.CreateChannel();
+                remoteFragebogen = cFactory.CreateChannel();
             }
             catch
             {
@@ -34,7 +34,7 @@ namespace Client_User
 
         public Fragebogen ImportierterFragebogen
         {
-            get { return this.importierterFragebogen; }
+            get { return this.importierterFragebogen_; }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -47,7 +47,7 @@ namespace Client_User
         {
             try
             {
-                string fragebogenString = fragebogen.pruefeVerfuegbareFrageboegen();
+                string fragebogenString = remoteFragebogen.pruefeVerfuegbareFrageboegen();
                 string[] frageboegen = fragebogenString.Split(';');
                 this.cbxFrageboegen.Items.Clear();
                 int anzahlFrageboegen=0;
@@ -60,12 +60,38 @@ namespace Client_User
                     }
                 }
                 this.cbxFrageboegen.SelectedIndex = 0;
-                MessageBox.Show(string.Format("Es wurden {0} Frageboegen erfolgreich importiert!", anzahlFrageboegen));
+                //MessageBox.Show(string.Format("Es sind {0} Frageboegen am Server verfuegbar! Bitte waehlen!", anzahlFrageboegen));
+                if (anzahlFrageboegen > 0)
+                {
+                    this.btnImport.Enabled = true;
+                    this.lblSupport.Visible = false;
+                    this.btnImport.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Keine Fragebögen verfügbar, bitte versuchen Sie es später noch einmal!");
+                    this.lblSupport.Visible = true;
+                    this.btnImport.Enabled = false;
+                }
             }
             catch(Exception ex)
             {
                 MessageBox.Show("Ein Fehler ist aufgetreten: " + ex.Message);
                 this.cbxFrageboegen.Items.Clear();
+            }
+        }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.importierterFragebogen_ = remoteFragebogen.importiereFragebogen(cbxFrageboegen.SelectedIndex);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Es ist ein Fehler aufgetreten: " + ex.Message);
             }
         }
     }

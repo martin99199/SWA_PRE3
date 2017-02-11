@@ -5,3 +5,4 @@ C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Entsche
 C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Debug\EntscheidungshelferBibliothek.csproj.GenerateResource.Cache
 C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Debug\EntscheidungshelferBibliothek.dll
 C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Debug\EntscheidungshelferBibliothek.pdb
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Debug\EntscheidungshelferBibliothek.csprojResolveAssemblyReference.cache

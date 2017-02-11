@@ -49,7 +49,8 @@ namespace Client_Admin
         {
             Fragebogen neuerFragebogen = new Fragebogen();
 
-            string[] linien = tbxVorschau.Text.Split('\n');
+            string linien_sp = tbxVorschau.Text.Replace(System.Environment.NewLine, "$");
+            string[] linien = linien_sp.Split('$');
             bool eingabeOK = true;
             try
             {
@@ -81,10 +82,12 @@ namespace Client_Admin
             {
                 try
                 {
-                    bool fragebogenGesendet = remoteFragebogen.sendeFragebogen(neuerFragebogen);
+                    Fragebogen tmpFragebogen = neuerFragebogen;
+                    bool fragebogenGesendet = remoteFragebogen.sendeFragebogen(tmpFragebogen);
                     if (fragebogenGesendet)
                     {
                         MessageBox.Show("Fragebogen an Server gesendet!");
+                        MessageBox.Show(neuerFragebogen.vorschau());
                     }
                     else
                     {

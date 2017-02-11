@@ -14,6 +14,7 @@ using System.Windows.Forms;
 
 namespace EntscheidungshelferBibliothek
 {
+    [Serializable]
     public class Fragebogen
     {
         #region Membervariablen
@@ -188,6 +189,18 @@ namespace EntscheidungshelferBibliothek
         {
             return this.titel_ + String.Format(" Anzahl der Fragen: {0}", this.fragen_.Count);
         }
+
+
+        /// <summary>
+        /// zuruecksetzen setzt alle relevanten Parameter des Fragebogens zurück, sodass
+        /// eine neuerliche Befragung durchgeführt werden kann.
+        /// </summary>
+        public void zuruecksetzen()
+        {
+            this.aktuelleFrageNr_ = 0;
+            this.antworten_.Clear();
+            this.fragebogenIstFertig_ = false;
+        }
         #endregion
 
         #region Eigenschaften
@@ -253,6 +266,7 @@ namespace EntscheidungshelferBibliothek
     /// die eigentliche Frage, sowie eine gewünschte Antwort und eine 
     /// ungewünschte Antwort enthält (Anwort1 = true, Antwort2 = false)
     /// </summary>
+    [Serializable]
     public class Frage
     {
         #region Konstruktoren

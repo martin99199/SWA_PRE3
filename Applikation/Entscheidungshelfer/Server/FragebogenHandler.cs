@@ -47,6 +47,7 @@ namespace Server
                 {
                     this.frageboegen_.Add(bogen);
                     fragebogenEmpfangen = true;
+                    Console.WriteLine("Fragebogen erhalten: " + bogen.vorschau());
                 }
                 Monitor.Exit(this.verriegelungsObjekt_);
             }

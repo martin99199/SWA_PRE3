@@ -14,6 +14,7 @@ namespace Testtreiber
             //1. Testfragebogen
             Fragebogen fragen = new Fragebogen();
             fragen.fuegeFrageHinzu("Ist etwas wahr?", "Ja", "Nein");
+            Console.WriteLine(fragen.vorschau());
             bool abbrechen = fragen.stelleFrage();
             if (!abbrechen)
             {

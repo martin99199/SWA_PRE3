@@ -33,6 +33,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAnfragen = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblSupport = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cbxFrageboegen
@@ -54,6 +55,7 @@
             this.btnImport.TabIndex = 1;
             this.btnImport.Text = "Importieren";
             this.btnImport.UseVisualStyleBackColor = true;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
             // btnCancel
             // 
@@ -68,10 +70,10 @@
             // 
             // btnAnfragen
             // 
-            this.btnAnfragen.Location = new System.Drawing.Point(316, 160);
+            this.btnAnfragen.Location = new System.Drawing.Point(256, 160);
             this.btnAnfragen.Margin = new System.Windows.Forms.Padding(6);
             this.btnAnfragen.Name = "btnAnfragen";
-            this.btnAnfragen.Size = new System.Drawing.Size(150, 104);
+            this.btnAnfragen.Size = new System.Drawing.Size(266, 104);
             this.btnAnfragen.TabIndex = 1;
             this.btnAnfragen.Text = "Verfuegbare Frageboegen anfragen";
             this.btnAnfragen.UseVisualStyleBackColor = true;
@@ -86,12 +88,23 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Verfuegbare Frageboegen:";
             // 
+            // lblSupport
+            // 
+            this.lblSupport.AutoSize = true;
+            this.lblSupport.Location = new System.Drawing.Point(55, 291);
+            this.lblSupport.Name = "lblSupport";
+            this.lblSupport.Size = new System.Drawing.Size(557, 50);
+            this.lblSupport.TabIndex = 4;
+            this.lblSupport.Text = "Keine Fragebögen? Kontaktieren Sie support@asap.com\r\n(Verfügbar ab 01.2029)";
+            this.lblSupport.Visible = false;
+            // 
             // Importer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(786, 342);
             this.ControlBox = false;
+            this.Controls.Add(this.lblSupport);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAnfragen);
@@ -112,5 +125,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnAnfragen;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSupport;
     }
 }
