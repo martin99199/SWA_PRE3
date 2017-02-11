@@ -67,6 +67,7 @@
             this.btnBefragungAbbrechen.TabIndex = 3;
             this.btnBefragungAbbrechen.Text = "Befragung abbrechen";
             this.btnBefragungAbbrechen.UseVisualStyleBackColor = true;
+            this.btnBefragungAbbrechen.Click += new System.EventHandler(this.btnBefragungAbbrechen_Click);
             // 
             // label1
             // 

@@ -140,45 +140,36 @@ namespace EntscheidungshelferBibliothek
         {
             int[] groessen = this.bestimmeGroessen(); //maxFrage, maxAntw1, maxAntw2
             int zeilenlaenge = 0;
-            if (groessen[1]> groessen[2])
+            if (groessen[1] > groessen[2])
             {
                 zeilenlaenge = groessen[0] + groessen[1] + 10;
             }
             else
             {
-                zeilenlaenge = groessen[0] + groessen[2]+10; //mindestens 5 Trennzeichen
+                zeilenlaenge = groessen[0] + groessen[2] + 10; //mindestens 5 Trennzeichen
             }
 
             string retString = this.titel_ + "\r\n";
-            for(int ii = 0; ii < this.fragen_.Count; ++ii)
+            string abstandsZeile = "|".PadRight(zeilenlaenge-1, ' ') + "|\r\n";
+
+            for (int ii = 0; ii < this.fragen_.Count; ++ii)
             {
                 string zeile = "";
-                if (ii != this.fragen_.Count-1)
-                {
-                    zeile += this.fragen_[ii].FrageText;
-                    zeile = zeile.PadRight(zeilenlaenge - fragen_[ii].Antwort2.Length - 5, '-');
-                    zeile += this.fragen_[ii].Antwort2;
-                    zeile = zeile.PadRight(zeilenlaenge, '-') + "\r\n";
-                    //
-                    retString += zeile;
-                    retString += "|".PadRight(zeilenlaenge - 1) + "|\r\n";
-                    retString += "|" + this.fragen_[ii].Antwort1.PadRight(zeilenlaenge - 2) + "|\r\n";
-                    retString += "|".PadRight(zeilenlaenge - 1) + "|\r\n";
-                }
-                else
-                {
-                    zeile += this.fragen_[ii].FrageText;
-                    zeile = zeile.PadRight(zeilenlaenge - fragen_[ii].Antwort2.Length - 5, '-');
-                    zeile += this.fragen_[ii].Antwort2;
-                    zeile = zeile.PadRight(zeilenlaenge, '-') + "\r\n";
-                    retString += zeile;
-                    retString += "|".PadRight(zeilenlaenge - 1) + "|\r\n";
-                    retString += "Positiv".PadRight(zeilenlaenge - "Negativ".Length) + "Negativ";
-                }
+                string zeile2 = "";
+                    zeile = this.fragen_[ii].FrageText.PadRight(zeilenlaenge - fragen_[ii].Antwort2.Length - 5, '-');
+                    zeile += fragen_[ii].Antwort2;
+                    zeile = zeile.PadRight(zeilenlaenge, '-') +"\r\n";
+
+                    zeile2 = "| " + this.fragen_[ii].Antwort1;
+                    zeile2 = zeile2.PadRight(zeilenlaenge - 1, ' ');
+                    zeile2 += "|\r\n";
+
+                    retString += zeile + abstandsZeile + zeile2 + abstandsZeile;
             }
-            
+            retString += "Positiv".PadRight(zeilenlaenge - "Negativ".Length, ' ') + "Negativ";
             return retString;
         }
+
 
         /// <summary>
         /// Vorschau des Fragebogens mit dem Titel
@@ -187,7 +178,7 @@ namespace EntscheidungshelferBibliothek
         /// <returns>String, der die Informationen enthält</returns>
         public string vorschau()
         {
-            return this.titel_ + String.Format(" Anzahl der Fragen: {0}", this.fragen_.Count);
+            return this.titel_ + String.Format(": Anzahl der Fragen: {0}", this.fragen_.Count);
         }
 
 
@@ -255,6 +246,10 @@ namespace EntscheidungshelferBibliothek
                     maxGroesseAntwort2 = frage.Antwort2.Length;
                 }
 
+            }
+            if(maxGroesseFrage < "Positiv".Length)
+            {
+                maxGroesseFrage = "Positiv".Length;
             }
             return new int[] { maxGroesseFrage, maxGroesseAntwort1, maxGroesseAntwort2 };
         }

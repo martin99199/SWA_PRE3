@@ -40,9 +40,10 @@ namespace Client_User
             if (!befragungGestartet_)
             {
                 this.befragungGestartet_ = true;
-                this.btnBefragungNaechsteFrage.Text = "Naechste Frage";
-                this.btnBefragungAbbrechen.Enabled = true;
+                this.lblErgebnis.Text = "Ergebnis: ";
+                this.lblErgebnis.ForeColor = Color.Black;
             }
+
             this.fragebogen_.stelleFrage();
             this.pgbFortschritt.Value = (int)(this.fragebogen_.Fortschritt * 100);
             if (this.fragebogen_.FragebogenFertig)
@@ -59,9 +60,15 @@ namespace Client_User
                     this.lblErgebnis.Text += " NEGATIV";
                     this.lblErgebnis.ForeColor = Color.Red;
                 }
-                this.btnBefragungNaechsteFrage.Text = "Befragung erneut durchführen";
+                this.btnBefragungNaechsteFrage.Text = "Erneut durchführen";
                 this.befragungGestartet_ = false;
                 this.fragebogen_.zuruecksetzen();
+                this.btnBefragungAbbrechen.Enabled = false;
+            }
+            else
+            {
+                this.btnBefragungNaechsteFrage.Text = "Nächste Frage";
+                this.btnBefragungAbbrechen.Enabled = true;
             }
         }
 
@@ -71,41 +78,16 @@ namespace Client_User
             viewer.ShowDialog();
         }
 
-        #region Helfermethoden
-        private void aktualisiereAnzeige()
+        private void btnBefragungAbbrechen_Click(object sender, EventArgs e)
         {
-            if (this.fragebogen_ != null)
+            this.pgbFortschritt.Value = 0;
+            this.befragungGestartet_ = false;
+            this.btnBefragungNaechsteFrage.Text = "Befragung starten";
+            if(this.fragebogen_ != null)
             {
-                this.pgbFortschritt.Value = (int)this.fragebogen_.Fortschritt;
-                if (this.befragungGestartet_)
-                {
-                    this.btnBefragungAbbrechen.Enabled = true;
-                    this.btnImportieren.Enabled = true;
-                    this.btnVisualisieren.Enabled = true;
-                    if (!this.fragebogen_.FragebogenFertig)
-                    {
-                        this.btnBefragungNaechsteFrage.Text = "Nächste Frage";
-                    }
-                    else
-                    {
-                        this.btnBefragungNaechsteFrage.Text = "Erneute Befragung";
-                    }
-                }
-                else //Befragung noch nicht gestartet
-                {
-                    this.btnBefragungAbbrechen.Enabled = false;
-                    this.btnImportieren.Enabled = true;
-                    this.btnVisualisieren.Enabled = true;
-                    this.btnBefragungNaechsteFrage.Text = "Befragung starten";
-                }
+                this.fragebogen_.zuruecksetzen();
             }
-            else //Fragebogen == null
-            {
-                this.btnBefragungNaechsteFrage.Enabled = false;
-                this.btnBefragungAbbrechen.Enabled = false;
-                this.btnVisualisieren.Enabled = false;
-            }
+            this.btnBefragungAbbrechen.Enabled = false;
         }
-        #endregion //Helfermethoden
     }
 }

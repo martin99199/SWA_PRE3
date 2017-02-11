@@ -59,13 +59,14 @@ namespace Client_User
                         ++anzahlFrageboegen;
                     }
                 }
-                this.cbxFrageboegen.SelectedIndex = 0;
+                
                 //MessageBox.Show(string.Format("Es sind {0} Frageboegen am Server verfuegbar! Bitte waehlen!", anzahlFrageboegen));
                 if (anzahlFrageboegen > 0)
                 {
                     this.btnImport.Enabled = true;
                     this.lblSupport.Visible = false;
                     this.btnImport.Enabled = true;
+                    this.cbxFrageboegen.SelectedIndex = 0;
                 }
                 else
                 {
@@ -76,7 +77,8 @@ namespace Client_User
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Ein Fehler ist aufgetreten: " + ex.Message);
+                //MessageBox.Show("Ein Fehler ist aufgetreten: " + ex.Message);
+                MessageBox.Show("Es ist ein Fehler aufgetreten: Der Server konnte nicht gefunden werden! Prüfen Sie die IP-Adresse sowie ob der Server läuft und versuchen Sie die Anwendung neu zu starten");
                 this.cbxFrageboegen.Items.Clear();
             }
         }
