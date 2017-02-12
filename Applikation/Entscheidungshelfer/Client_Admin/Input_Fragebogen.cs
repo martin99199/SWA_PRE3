@@ -34,19 +34,27 @@ namespace Client_Admin
             bool eingabeOK = true;
             if (linien.Length > 1)
             {
-                for (int ii = 1; ii < linien.Length; ++ii)
+                if (linien[0].Contains(';'))
                 {
-                    string linie = linien[ii];
-                    try
+                    MessageBox.Show("Bitte keine ';' im Titel verwenden!");
+                    eingabeOK = false;
+                }
+                else
+                {
+                    for (int ii = 1; ii < linien.Length; ++ii)
                     {
-                        if (linie != "\r" && linie != "")
+                        string linie = linien[ii];
+                        try
                         {
-                            Frage.parseFrage(linie);
+                            if (linie != "\r" && linie != "")
+                            {
+                                Frage.parseFrage(linie);
+                            }
                         }
-                    }
-                    catch
-                    {
-                        eingabeOK = false;
+                        catch
+                        {
+                            eingabeOK = false;
+                        }
                     }
                 }
             }
