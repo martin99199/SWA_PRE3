@@ -1,0 +1,8 @@
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\bin\Release\EntscheidungshelferBibliothek.dll
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\bin\Release\EntscheidungshelferBibliothek.pdb
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Release\EntscheidungshelferBibliothek.csprojResolveAssemblyReference.cache
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Release\EntscheidungshelferBibliothek.FragenSteller.resources
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Release\EntscheidungshelferBibliothek.Importer.resources
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Release\EntscheidungshelferBibliothek.csproj.GenerateResource.Cache
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Release\EntscheidungshelferBibliothek.dll
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Release\EntscheidungshelferBibliothek.pdb

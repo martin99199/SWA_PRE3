@@ -39,9 +39,10 @@
             // 
             // btnExportieren
             // 
-            this.btnExportieren.Location = new System.Drawing.Point(39, 517);
+            this.btnExportieren.Location = new System.Drawing.Point(52, 646);
+            this.btnExportieren.Margin = new System.Windows.Forms.Padding(4);
             this.btnExportieren.Name = "btnExportieren";
-            this.btnExportieren.Size = new System.Drawing.Size(450, 59);
+            this.btnExportieren.Size = new System.Drawing.Size(600, 74);
             this.btnExportieren.TabIndex = 0;
             this.btnExportieren.Text = "Fragebogen exportieren";
             this.btnExportieren.UseVisualStyleBackColor = true;
@@ -49,9 +50,10 @@
             // 
             // btnLaden
             // 
-            this.btnLaden.Location = new System.Drawing.Point(6, 25);
+            this.btnLaden.Location = new System.Drawing.Point(8, 31);
+            this.btnLaden.Margin = new System.Windows.Forms.Padding(4);
             this.btnLaden.Name = "btnLaden";
-            this.btnLaden.Size = new System.Drawing.Size(214, 46);
+            this.btnLaden.Size = new System.Drawing.Size(285, 58);
             this.btnLaden.TabIndex = 1;
             this.btnLaden.Text = "Laden";
             this.btnLaden.UseVisualStyleBackColor = true;
@@ -59,9 +61,10 @@
             // 
             // btnErstellen
             // 
-            this.btnErstellen.Location = new System.Drawing.Point(39, 452);
+            this.btnErstellen.Location = new System.Drawing.Point(52, 565);
+            this.btnErstellen.Margin = new System.Windows.Forms.Padding(4);
             this.btnErstellen.Name = "btnErstellen";
-            this.btnErstellen.Size = new System.Drawing.Size(450, 59);
+            this.btnErstellen.Size = new System.Drawing.Size(600, 74);
             this.btnErstellen.TabIndex = 2;
             this.btnErstellen.Text = "Fragebogen erstellen";
             this.btnErstellen.UseVisualStyleBackColor = true;
@@ -69,29 +72,33 @@
             // 
             // tbxVorschau
             // 
-            this.tbxVorschau.Location = new System.Drawing.Point(39, 105);
+            this.tbxVorschau.Location = new System.Drawing.Point(52, 131);
+            this.tbxVorschau.Margin = new System.Windows.Forms.Padding(4);
             this.tbxVorschau.Multiline = true;
             this.tbxVorschau.Name = "tbxVorschau";
             this.tbxVorschau.ReadOnly = true;
-            this.tbxVorschau.Size = new System.Drawing.Size(450, 341);
+            this.tbxVorschau.Size = new System.Drawing.Size(599, 425);
             this.tbxVorschau.TabIndex = 4;
             // 
             // gbFragebogen
             // 
             this.gbFragebogen.Controls.Add(this.btnSpeichern);
             this.gbFragebogen.Controls.Add(this.btnLaden);
-            this.gbFragebogen.Location = new System.Drawing.Point(39, 12);
+            this.gbFragebogen.Location = new System.Drawing.Point(52, 15);
+            this.gbFragebogen.Margin = new System.Windows.Forms.Padding(4);
             this.gbFragebogen.Name = "gbFragebogen";
-            this.gbFragebogen.Size = new System.Drawing.Size(450, 87);
+            this.gbFragebogen.Padding = new System.Windows.Forms.Padding(4);
+            this.gbFragebogen.Size = new System.Drawing.Size(600, 109);
             this.gbFragebogen.TabIndex = 5;
             this.gbFragebogen.TabStop = false;
             this.gbFragebogen.Text = "Fragebogen";
             // 
             // btnSpeichern
             // 
-            this.btnSpeichern.Location = new System.Drawing.Point(230, 25);
+            this.btnSpeichern.Location = new System.Drawing.Point(307, 31);
+            this.btnSpeichern.Margin = new System.Windows.Forms.Padding(4);
             this.btnSpeichern.Name = "btnSpeichern";
-            this.btnSpeichern.Size = new System.Drawing.Size(214, 46);
+            this.btnSpeichern.Size = new System.Drawing.Size(285, 58);
             this.btnSpeichern.TabIndex = 6;
             this.btnSpeichern.Text = "Speichern";
             this.btnSpeichern.UseVisualStyleBackColor = true;
@@ -99,13 +106,15 @@
             // 
             // Client_Admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 588);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(739, 779);
             this.Controls.Add(this.btnErstellen);
             this.Controls.Add(this.gbFragebogen);
             this.Controls.Add(this.tbxVorschau);
             this.Controls.Add(this.btnExportieren);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Client_Admin";
             this.Text = "Client Admin";
             this.gbFragebogen.ResumeLayout(false);

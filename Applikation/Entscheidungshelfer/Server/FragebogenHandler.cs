@@ -47,6 +47,7 @@ namespace Server
                 {
                     this.frageboegen_.Add(bogen);
                     fragebogenEmpfangen = true;
+                    Console.WriteLine("Fragebogen erhalten: " + bogen.vorschau());
                 }
                 Monitor.Exit(this.verriegelungsObjekt_);
             }
@@ -70,7 +71,7 @@ namespace Server
                     int ii = 0;
                     foreach(Fragebogen frageBogen in this.frageboegen_)
                     {
-                        verfuegbareBoegen += string.Format("{0}: {1}", ii, frageBogen.vorschau());
+                        verfuegbareBoegen += string.Format("{0}: {1};", ii, frageBogen.vorschau());
                         ++ii;
                     }
                 }

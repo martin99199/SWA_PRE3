@@ -14,6 +14,7 @@ using System.Windows.Forms;
 
 namespace EntscheidungshelferBibliothek
 {
+    [Serializable]
     public class Fragebogen
     {
         #region Membervariablen
@@ -37,6 +38,7 @@ namespace EntscheidungshelferBibliothek
             this.aktuelleFrageNr_ = 0;
             this.fragebogenIstFertig_ = false;
             this.finalesErgebnis_ = true;
+            this.titel_ = "Leerer Fragebogen";
         }
 
         /// <summary>
@@ -118,6 +120,7 @@ namespace EntscheidungshelferBibliothek
         /// Überschreibung der ToString-Methode:
         /// Stellt einen Fragebogen übersichtlich dar mit seinen 
         /// Entscheidungsmöglichkeiten-->
+        /// Titel
         /// Frage1 --------Antwort2--------
         ///   |                           |
         ///   | Antwort1                  |
@@ -137,45 +140,36 @@ namespace EntscheidungshelferBibliothek
         {
             int[] groessen = this.bestimmeGroessen(); //maxFrage, maxAntw1, maxAntw2
             int zeilenlaenge = 0;
-            if (groessen[1]> groessen[2])
+            if (groessen[1] > groessen[2])
             {
                 zeilenlaenge = groessen[0] + groessen[1] + 10;
             }
             else
             {
-                zeilenlaenge = groessen[0] + groessen[2]+10; //mindestens 5 Trennzeichen
+                zeilenlaenge = groessen[0] + groessen[2] + 10; //mindestens 5 Trennzeichen
             }
 
-            string retString = "";
-            for(int ii = 0; ii < this.fragen_.Count; ++ii)
+            string retString = this.titel_ + "\r\n";
+            string abstandsZeile = "|".PadRight(zeilenlaenge-1, ' ') + "|\r\n";
+
+            for (int ii = 0; ii < this.fragen_.Count; ++ii)
             {
                 string zeile = "";
-                if (ii != this.fragen_.Count-1)
-                {
-                    zeile += this.fragen_[ii].FrageText;
-                    zeile = zeile.PadRight(zeilenlaenge - fragen_[ii].Antwort2.Length - 5, '-');
-                    zeile += this.fragen_[ii].Antwort2;
-                    zeile = zeile.PadRight(zeilenlaenge, '-') + "\r\n";
-                    //
-                    retString += zeile;
-                    retString += "|".PadRight(zeilenlaenge - 1) + "|\r\n";
-                    retString += "|" + this.fragen_[ii].Antwort1.PadRight(zeilenlaenge - 2) + "|\r\n";
-                    retString += "|".PadRight(zeilenlaenge - 1) + "|\r\n";
-                }
-                else
-                {
-                    zeile += this.fragen_[ii].FrageText;
-                    zeile = zeile.PadRight(zeilenlaenge - fragen_[ii].Antwort2.Length - 5, '-');
-                    zeile += this.fragen_[ii].Antwort2;
-                    zeile = zeile.PadRight(zeilenlaenge, '-') + "\r\n";
-                    retString += zeile;
-                    retString += "|".PadRight(zeilenlaenge - 1) + "|\r\n";
-                    retString += "Positiv".PadRight(zeilenlaenge - "Negativ".Length) + "Negativ";
-                }
+                string zeile2 = "";
+                    zeile = this.fragen_[ii].FrageText.PadRight(zeilenlaenge - fragen_[ii].Antwort2.Length - 5, '-');
+                    zeile += fragen_[ii].Antwort2;
+                    zeile = zeile.PadRight(zeilenlaenge, '-') +"\r\n";
+
+                    zeile2 = "| " + this.fragen_[ii].Antwort1;
+                    zeile2 = zeile2.PadRight(zeilenlaenge - 1, ' ');
+                    zeile2 += "|\r\n";
+
+                    retString += zeile + abstandsZeile + zeile2 + abstandsZeile;
             }
-            
+            retString += "Positiv".PadRight(zeilenlaenge - "Negativ".Length, ' ') + "Negativ";
             return retString;
         }
+
 
         /// <summary>
         /// Vorschau des Fragebogens mit dem Titel
@@ -184,7 +178,19 @@ namespace EntscheidungshelferBibliothek
         /// <returns>String, der die Informationen enthält</returns>
         public string vorschau()
         {
-            return this.titel_ + String.Format(" Anzahl der Fragen: {0}", this.fragen_.Count);
+            return this.titel_ + String.Format(": Anzahl der Fragen: {0}", this.fragen_.Count);
+        }
+
+
+        /// <summary>
+        /// zuruecksetzen setzt alle relevanten Parameter des Fragebogens zurück, sodass
+        /// eine neuerliche Befragung durchgeführt werden kann.
+        /// </summary>
+        public void zuruecksetzen()
+        {
+            this.aktuelleFrageNr_ = 0;
+            this.antworten_.Clear();
+            this.fragebogenIstFertig_ = false;
         }
         #endregion
 
@@ -200,6 +206,17 @@ namespace EntscheidungshelferBibliothek
         public bool FinalesErgebnis
         {
             get { return this.finalesErgebnis_; }
+        }
+        public string Titel
+        {
+            get { return this.titel_; }
+            set
+            {
+                if (!string.IsNullOrEmpty(value))
+                {
+                    this.titel_ = value;
+                }
+            }
         }
         #endregion
 
@@ -230,6 +247,10 @@ namespace EntscheidungshelferBibliothek
                 }
 
             }
+            if(maxGroesseFrage < "Positiv".Length)
+            {
+                maxGroesseFrage = "Positiv".Length;
+            }
             return new int[] { maxGroesseFrage, maxGroesseAntwort1, maxGroesseAntwort2 };
         }
         #endregion
@@ -240,6 +261,7 @@ namespace EntscheidungshelferBibliothek
     /// die eigentliche Frage, sowie eine gewünschte Antwort und eine 
     /// ungewünschte Antwort enthält (Anwort1 = true, Antwort2 = false)
     /// </summary>
+    [Serializable]
     public class Frage
     {
         #region Konstruktoren

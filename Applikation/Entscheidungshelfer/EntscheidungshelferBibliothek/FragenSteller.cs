@@ -21,7 +21,7 @@ namespace EntscheidungshelferBibliothek
             vertauscht_ = randZahl == 0;
             InitializeComponent();
             this.lblFrage.Text = frage;
-            if (vertauscht_)
+            if (!vertauscht_)
             { 
                 this.btnAntwort1.Text = antwort1;
                 this.btnAntwort2.Text = antwort2;
@@ -37,13 +37,13 @@ namespace EntscheidungshelferBibliothek
 
         private void btnAntwort1_Click(object sender, EventArgs e)
         {
-            if (vertauscht_)
+            if (!vertauscht_)
             {
-                this.DialogResult = DialogResult.No;
+                this.DialogResult = DialogResult.Yes;
             }
             else
             {
-                this.DialogResult = DialogResult.Yes;
+                this.DialogResult = DialogResult.No;
             }
             this.Close();
         }

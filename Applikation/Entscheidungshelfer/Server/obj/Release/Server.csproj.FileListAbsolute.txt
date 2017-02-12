@@ -1,0 +1,8 @@
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Server\bin\Release\Server.exe.config
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Server\bin\Release\Server.exe
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Server\bin\Release\Server.pdb
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Server\bin\Release\EntscheidungshelferBibliothek.dll
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Server\bin\Release\EntscheidungshelferBibliothek.pdb
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Server\obj\Release\Server.csprojResolveAssemblyReference.cache
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Server\obj\Release\Server.exe
+C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Server\obj\Release\Server.pdb
