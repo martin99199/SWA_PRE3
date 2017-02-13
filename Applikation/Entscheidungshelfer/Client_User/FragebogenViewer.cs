@@ -15,8 +15,8 @@ namespace Client_User
     {
         public FragebogenViewer(Fragebogen bogen)
         {
-            string anzeige = bogen.ToString();
             InitializeComponent();
+            string anzeige = bogen.ToString();
             this.textBox1.Text = anzeige;
         }
 
