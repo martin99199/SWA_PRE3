@@ -191,6 +191,7 @@ namespace EntscheidungshelferBibliothek
             this.aktuelleFrageNr_ = 0;
             this.antworten_.Clear();
             this.fragebogenIstFertig_ = false;
+            this.finalesErgebnis_ = true;
         }
         #endregion
 
