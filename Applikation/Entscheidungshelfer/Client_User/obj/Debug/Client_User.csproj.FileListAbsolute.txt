@@ -12,3 +12,6 @@ C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_
 C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\obj\Debug\Client_User.exe
 C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\obj\Debug\Client_User.pdb
 C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\obj\Debug\Client_User.FragebogenViewer.resources
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\bin\Debug\Client_User.exe.config
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\obj\Debug\Client_User.exe
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\obj\Debug\Client_User.pdb
