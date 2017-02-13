@@ -32,6 +32,7 @@ namespace Client_Admin
         {
             string[] linien = tbxFragebogen.Text.Split('\n');
             bool eingabeOK = true;
+            int fragenNum = 0;
             if (linien.Length > 1)
             {
                 if (linien[0].Contains(';'))
@@ -49,6 +50,7 @@ namespace Client_Admin
                             if (linie != "\r" && linie != "")
                             {
                                 Frage.parseFrage(linie);
+                                fragenNum++;
                             }
                         }
                         catch
@@ -62,7 +64,11 @@ namespace Client_Admin
             {
                 eingabeOK = false;
             }
-            if(eingabeOK)
+            if (fragenNum == 0)
+            {
+                eingabeOK = false;
+            }
+            if (eingabeOK)
             {
                 this.DialogResult = DialogResult.OK;
                 this.Close();

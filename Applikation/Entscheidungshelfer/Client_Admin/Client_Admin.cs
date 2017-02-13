@@ -54,24 +54,32 @@ namespace Client_Admin
             bool eingabeOK = true;
             try
             {
-                neuerFragebogen.Titel = linien[0];
-                for (int ii = 1; ii < linien.Length; ++ii)
+                if (linien[0] != "")
                 {
-                    string linie = linien[ii];
-                    try
+                    neuerFragebogen.Titel = linien[0];
+                    for (int ii = 1; ii < linien.Length; ++ii)
                     {
-                        if (linie != "\r" && linie != "")
+                        string linie = linien[ii];
+                        try
                         {
-                            string[] linieElemente = linie.Split(';');
-                            string[] zwErg = linieElemente[2].Split('\r');
-                            linieElemente[2] = zwErg[0];
-                            neuerFragebogen.fuegeFrageHinzu(linieElemente[0], linieElemente[1], linieElemente[2]);
+                            if (linie != "\r" && linie != "")
+                            {
+                                string[] linieElemente = linie.Split(';');
+                                string[] zwErg = linieElemente[2].Split('\r');
+                                linieElemente[2] = zwErg[0];
+                                neuerFragebogen.fuegeFrageHinzu(linieElemente[0], linieElemente[1], linieElemente[2]);
+                            }
+                        }
+                        catch
+                        {
+                            eingabeOK = false;
                         }
                     }
-                    catch
-                    {
-                        eingabeOK = false;
-                    }
+                }
+                else
+                {
+                    MessageBox.Show("Title des Fragebogens muss mindestens ein Zeichen lang sein!");
+                    eingabeOK = false;
                 }
             }
             catch
@@ -143,8 +151,57 @@ namespace Client_Admin
                     zeilen += datei.ReadLine() + "\r\n";                   
                 }
                 tbxVorschau.Text = zeilen;
-                //Fragebogen fragebongen = new Fragebogen(openFileDialog1.FileName);
+                tbxVorschau.Text = test_Fragebogen(tbxVorschau.Text);
             }
+        }
+
+        private string test_Fragebogen(string Fragebogen)
+        {
+            string[] linien = Fragebogen.Split('\n');
+            bool eingabeOK = true;
+            int fragenNum = 0;
+            if (linien.Length > 1)
+            {
+                if (linien[0].Contains(';'))
+                {
+                    MessageBox.Show("Bitte keine ';' im Titel verwenden!");
+                    eingabeOK = false;
+                }
+                else
+                {
+                    for (int ii = 1; ii < linien.Length; ++ii)
+                    {
+                        string linie = linien[ii];
+                        try
+                        {
+                            if (linie != "\r" && linie != "")
+                            {
+                                Frage.parseFrage(linie);
+                                fragenNum++;
+                            }
+                        }
+                        catch
+                        {
+                            eingabeOK = false;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                eingabeOK = false;
+            }
+            if(fragenNum == 0)
+            {
+                eingabeOK = false;
+            }
+            if (!eingabeOK)
+            {
+                Fragebogen = "";
+                MessageBox.Show("Bitte Eingabe auf richtiges Format prüfen");
+            }
+
+            return Fragebogen;         
         }
     }
 }
