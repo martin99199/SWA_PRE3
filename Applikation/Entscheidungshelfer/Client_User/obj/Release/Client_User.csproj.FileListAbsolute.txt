@@ -12,3 +12,17 @@ C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_
 C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\obj\Release\Client_User.csproj.GenerateResource.Cache
 C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\obj\Release\Client_User.exe
 C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\obj\Release\Client_User.pdb
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\bin\Release\Client_User.exe.config
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\obj\Release\Client_User.exe
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\obj\Release\Client_User.pdb
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\bin\Release\Client_User.exe
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\bin\Release\Client_User.pdb
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\bin\Release\EntscheidungshelferBibliothek.dll
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\bin\Release\EntscheidungshelferBibliothek.pdb
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\obj\Release\Client_User.csprojResolveAssemblyReference.cache
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\obj\Release\Client_User.Client_Form.resources
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\obj\Release\Client_User.FragebogenViewer.resources
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\obj\Release\Client_User.Importer.resources
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\obj\Release\Client_User.Anzeige.resources
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\obj\Release\Client_User.Properties.Resources.resources
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Client_User\obj\Release\Client_User.csproj.GenerateResource.Cache

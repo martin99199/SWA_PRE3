@@ -6,3 +6,11 @@ C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\Entsche
 C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Release\EntscheidungshelferBibliothek.csproj.GenerateResource.Cache
 C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Release\EntscheidungshelferBibliothek.dll
 C:\Users\pmart\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Release\EntscheidungshelferBibliothek.pdb
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\bin\Release\EntscheidungshelferBibliothek.dll
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\bin\Release\EntscheidungshelferBibliothek.pdb
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Release\EntscheidungshelferBibliothek.csprojResolveAssemblyReference.cache
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Release\EntscheidungshelferBibliothek.FragenSteller.resources
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Release\EntscheidungshelferBibliothek.Importer.resources
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Release\EntscheidungshelferBibliothek.csproj.GenerateResource.Cache
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Release\EntscheidungshelferBibliothek.dll
+C:\Users\tobia\Documents\GitHub\SWA_PRE3\Applikation\Entscheidungshelfer\EntscheidungshelferBibliothek\obj\Release\EntscheidungshelferBibliothek.pdb

@@ -1,0 +1,5 @@
+Geht das?
+Geht das?;nein;ja
+Geht es jetzt?;oh noo; ja
+
+Jetzt aber? ;ja; NEIN
