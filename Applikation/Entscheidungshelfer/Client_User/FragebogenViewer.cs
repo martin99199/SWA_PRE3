@@ -1,4 +1,7 @@
-﻿using System;
+﻿//Darstellung des Fragebogens mit Hilfe der
+//ToString Methode aus der Klasse Fragebogen
+//Author: Reinhard Daum
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

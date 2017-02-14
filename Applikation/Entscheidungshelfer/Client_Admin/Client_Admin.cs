@@ -1,4 +1,7 @@
-﻿using System;
+﻿//Implementierung der Interaktionslogik für den Admin-Client
+//Author: Tobias Müller
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,6 +37,12 @@ namespace Client_Admin
             }
         }
 
+        /// <summary>
+        /// Öffnet das Dialogfenster zum
+        /// Erstellen eines Fragebogens
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnErstellen_Click(object sender, EventArgs e)
         {
             Input_Fragebogen form2InputFragebogen = new Input_Fragebogen();
@@ -45,6 +54,12 @@ namespace Client_Admin
             }
         }
 
+        /// <summary>
+        /// Versucht einen Fragebogen an den Server zu senden
+        /// Vor dem Senden wird die Eingabe geprüft.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExportieren_Click(object sender, EventArgs e)
         {
             Fragebogen neuerFragebogen = new Fragebogen();
@@ -113,6 +128,13 @@ namespace Client_Admin
             }
         }
 
+
+        /// <summary>
+        /// Ruft einen Dialog auf, der es ermöglicht
+        /// einen eingegebenen Fragebogen zu speichern.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSpeichern_Click(object sender, EventArgs e)
         {
             // SaveFileDialog Anzeigen
@@ -134,6 +156,11 @@ namespace Client_Admin
             }
         }
 
+        /// <summary>
+        /// Lädt einen gespeicherten Fragebogen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLaden_Click(object sender, EventArgs e)
         {
             // SaveFileDialog Anzeigen
@@ -155,6 +182,11 @@ namespace Client_Admin
             }
         }
 
+        /// <summary>
+        /// Testet Fragebogen auf Gültigkeit
+        /// </summary>
+        /// <param name="Fragebogen"></param>
+        /// <returns></returns>
         private string test_Fragebogen(string Fragebogen)
         {
             string[] linien = Fragebogen.Split('\n');

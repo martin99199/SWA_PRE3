@@ -1,4 +1,7 @@
-﻿using System;
+﻿//Fenster zum Importieren eines neuen Fragebogens
+//Author: Reinhard Daum
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,7 +35,7 @@ namespace Client_User
             }
         }
 
-        public Fragebogen ImportierterFragebogen
+        public Fragebogen ImportierterFragebogen 
         {
             get { return this.importierterFragebogen_; }
         }
@@ -43,6 +46,13 @@ namespace Client_User
             this.Close();
         }
 
+        /// <summary>
+        /// Versucht eine Verbindung zum Server aufzubauen (RPC)
+        /// und stellt die verfügbaren Fragebögen in der 
+        /// Kombobox dar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAnfragen_Click(object sender, EventArgs e)
         {
             try
@@ -83,6 +93,11 @@ namespace Client_User
             }
         }
 
+        /// <summary>
+        /// Importiert den ausgewählten Fragebogen vom Server
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnImport_Click(object sender, EventArgs e)
         {
             try

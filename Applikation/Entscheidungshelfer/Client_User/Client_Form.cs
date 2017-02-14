@@ -1,4 +1,7 @@
-﻿using System;
+﻿//Interaktionslogik für den User-Client
+//Autor: Reinhard Daum
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,14 +16,20 @@ namespace Client_User
 {
     public partial class Client_Form : Form
     {
-        private bool befragungGestartet_;
-        private Fragebogen fragebogen_;
+        private bool befragungGestartet_; //Hilfsvariable
+        private Fragebogen fragebogen_; //Fragebogen, der gerade aktuell ist
         public Client_Form()
         {
             InitializeComponent();
             this.pgbFortschritt.Maximum = 100;
         }
 
+        /// <summary>
+        /// öffnet ein Importerfenster und übernimmt
+        /// den Fragebogen, wenn einer importiert wurde
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnImportieren_Click(object sender, EventArgs e)
         {
             Importer importerFenster = new Importer();
@@ -35,6 +44,12 @@ namespace Client_User
             }
         }
 
+        /// <summary>
+        /// ruft die stelle Frage- Methode der Klasse Frage auf
+        /// und handelt die Antwort bzw. das Ergebnis des Fragebogens
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBefragungNaechsteFrage_Click(object sender, EventArgs e)
         {
             if (!befragungGestartet_)
@@ -72,12 +87,22 @@ namespace Client_User
             }
         }
 
+        /// <summary>
+        /// öffnet ein Fenster, in dem der Fragebogen visualisiert wird
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnVisualisieren_Click(object sender, EventArgs e)
         {
             FragebogenViewer viewer = new FragebogenViewer(this.fragebogen_);
             viewer.ShowDialog();
         }
 
+        /// <summary>
+        /// stoppt eine Befragung und setzt den Fragebogen zurück
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBefragungAbbrechen_Click(object sender, EventArgs e)
         {
             this.pgbFortschritt.Value = 0;

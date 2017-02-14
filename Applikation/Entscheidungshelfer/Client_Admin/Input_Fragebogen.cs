@@ -1,4 +1,7 @@
-﻿using System;
+﻿//Eingabefenster für einen neuen Fragebogen
+//Author: Tobias Müller
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +17,11 @@ namespace Client_Admin
     public partial class Input_Fragebogen : Form
     {
         #region Properties
+        /// <summary>
+        /// Eigenschaft um später
+        /// den Text extrahieren zu 
+        /// können (statt public - Variable)
+        /// </summary>
         public TextBox TbxFragebogen
         {
             get
@@ -28,6 +36,14 @@ namespace Client_Admin
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Prüft Eingabe und erstellt bei passender
+        /// Eingabe einen Fragebogen. Ist die Eingabe
+        /// nicht ok wird dem Benutzer eine Meldung 
+        /// angezeigt
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOK_Click(object sender, EventArgs e)
         {
             string[] linien = tbxFragebogen.Text.Split('\n');
